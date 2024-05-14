@@ -9,6 +9,9 @@
   "appIsExample": false,
   "unreadCommentThreads": 0,
   "color": "#FFEBFB",
+  "unpublishedAppLayout": {
+    "type": "MOBILE"
+  },
   "unpublishedCustomJSLibs": [],
   "publishedCustomJSLibs": [],
   "evaluationVersion": 2,
