@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "getAllPokemons",
+    "name": "getPokemons",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -27,11 +27,11 @@
       "queryParameters": [
         {
           "key": "offset",
-          "value": "{{PokemonList.pageNo - 1}}"
+          "value": "{{this.params.offset}}"
         },
         {
           "key": "limit",
-          "value": "{{PokemonList.pageSize}}"
+          "value": "{{this.params.limit}}"
         }
       ],
       "body": "",
@@ -64,8 +64,8 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "PokemonList.pageNo - 1",
-      "PokemonList.pageSize"
+      "this.params.limit",
+      "this.params.offset"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
@@ -73,7 +73,7 @@
     "userPermissions": [],
     "createdAt": "2024-05-14T17:08:24Z"
   },
-  "id": "Home_getAllPokemons",
+  "id": "Home_getPokemons",
   "deleted": false,
   "gitSyncId": "66439390b28def2d9a8599a3_1caae27e-861a-4045-b3ff-a01794295533"
 }
