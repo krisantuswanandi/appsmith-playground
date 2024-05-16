@@ -18,11 +18,10 @@
     "animateLoading": true,
     "overflow": "NONE",
     "dynamicTriggerPathList": [],
-    "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+    "fontFamily": "Inter",
     "dynamicBindingPathList": [
         {"key": "text"},
         {"key": "truncateButtonColor"},
-        {"key": "fontFamily"},
         {"key": "borderRadius"},
         {"key": "text"}
     ],
@@ -32,7 +31,7 @@
     "text": "{{currentItem.name}}",
     "key": "gquuoqv6kg",
     "isDeprecated": false,
-    "rightColumn": 28,
+    "rightColumn": 64,
     "thumbnailSVG": "https://appcdn.appsmith.com/static/media/thumbnail.0c129b82c9b3e4cd4920563b289659ab.svg",
     "textAlign": "LEFT",
     "dynamicHeight": "FIXED",

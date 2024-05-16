@@ -1,11 +1,12 @@
 {
-    "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+    "boxShadow": "none",
     "requiresFlatWidgetChildren": true,
     "isCanvas": true,
     "templateHeight": 160,
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.25a47fc4c639c22e8da41e27e998b550.svg",
     "topRow": 0,
     "pageSize": 5,
+    "onPageChange": "{{getAllPokemons.run({\n \"limit\": 10,\n\t\"offset\": 2\n});}}",
     "type": "LIST_WIDGET_V2",
     "itemSpacing": 8,
     "animateLoading": true,
@@ -15,10 +16,11 @@
         {"key": "triggeredItemView"},
         {"key": "primaryKeys"},
         {"key": "accentColor"},
-        {"key": "borderRadius"},
-        {"key": "boxShadow"}
+        {"key": "listData"},
+        {"key": "totalRecordsCount"}
     ],
     "leftColumn": 0,
+    "serverSidePagination": true,
     "enhancements": true,
     "children": [{
         "needsErrorInfo": false,
@@ -27,7 +29,7 @@
         "widgetName": "Canvas1",
         "displayName": "Canvas",
         "topRow": 0,
-        "bottomRow": 620,
+        "bottomRow": 550,
         "parentRowSpace": 1,
         "type": "CANVAS_WIDGET",
         "canExtend": false,
@@ -82,6 +84,7 @@
         "selectionColorCSSVar": "--on-canvas-ui-widget-focus"
     },
     "isVisible": true,
+    "totalRecordsCount": "{{getAllPokemons.data.count}}",
     "tags": [
         "Suggested",
         "Display"
@@ -89,7 +92,7 @@
     "hasMetaWidgets": true,
     "isLoading": false,
     "mainCanvasId": "39m5dkf7gq",
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "borderRadius": "0.375rem",
     "additionalStaticProps": [
         "level",
         "levelData",
@@ -100,38 +103,22 @@
     "mobileBottomRow": 47,
     "currentItemsView": "{{[]}}",
     "triggeredItemView": "{{{}}}",
-    "widgetName": "List1",
-    "listData": [
-        {
-            "img": "https://assets.appsmith.com/widgets/default.png",
-            "name": "Blue",
-            "id": "001"
-        },
-        {
-            "img": "https://assets.appsmith.com/widgets/default.png",
-            "name": "Green",
-            "id": "002"
-        },
-        {
-            "img": "https://assets.appsmith.com/widgets/default.png",
-            "name": "Red",
-            "id": "003"
-        }
-    ],
+    "widgetName": "PokemonList",
+    "listData": "{{getAllPokemons.data.results}}",
     "displayName": "List",
-    "bottomRow": 62,
+    "bottomRow": 55,
     "parentRowSpace": 10,
     "hideCard": false,
     "mobileRightColumn": 26,
     "mainContainerId": "s4nj8319n1",
-    "primaryKeys": "{{List1.listData.map((currentItem, currentIndex) => currentItem[\"id\"] )}}",
+    "primaryKeys": "{{PokemonList.listData.map((currentItem, currentIndex) => currentItem[\"name\"] )}}",
     "parentColumnSpace": 12.859375,
-    "dynamicTriggerPathList": [],
+    "dynamicTriggerPathList": [{"key": "onPageChange"}],
     "gridType": "vertical",
     "key": "vrrzm6o677",
     "backgroundColor": "transparent",
     "isDeprecated": false,
-    "rightColumn": 63,
+    "rightColumn": 64,
     "thumbnailSVG": "https://appcdn.appsmith.com/static/media/thumbnail.469b7e8d3a04de93014af9a7bc9ebe56.svg",
     "widgetId": "cwa1h31mxl",
     "minWidth": 450,

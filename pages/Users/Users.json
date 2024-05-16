@@ -1,41 +1,46 @@
 {
   "unpublishedPage": {
-    "name": "Home",
-    "slug": "home",
+    "name": "Users",
+    "slug": "users",
     "layouts": [
       {
         "viewMode": false,
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 4896,
+          "rightColumn": 1174,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 550,
+          "bottomRow": 880,
           "containerStyle": "none",
-          "snapRows": 124,
+          "snapRows": 125,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
           "version": 89,
-          "minHeight": 1292,
-          "dynamicTriggerPathList": [],
+          "minHeight": 900,
           "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
           "dynamicBindingPathList": [],
           "leftColumn": 0
         },
         "layoutOnLoadActions": [
           [
             {
-              "id": "Home_getAllPokemons",
-              "name": "getAllPokemons",
+              "id": "Users_FindQuery",
+              "name": "FindQuery",
               "confirmBeforeExecute": false,
-              "pluginType": "API",
+              "pluginType": "DB",
               "jsonPathKeys": [
-                "PokemonList.pageSize",
-                "PokemonList.pageNo - 1"
+                "key_select.selectedOptionValue",
+                "data_table.pageSize",
+                "data_table.sortOrder.order == \"desc\" ? -1 : 1",
+                "data_table.searchText||\"\"",
+                "data_table.sortOrder.column || 'name'",
+                "(data_table.pageNo - 1) * data_table.pageSize",
+                "order_select.selectedOptionValue"
               ],
               "timeoutInMillisecond": 10000
             }
@@ -43,16 +48,15 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Home",
+        "id": "Users",
         "deleted": false,
         "policies": [],
         "userPermissions": []
       }
     ],
     "userPermissions": [],
-    "policies": [],
-    "isHidden": false
+    "policies": []
   },
   "deleted": false,
-  "gitSyncId": "6643919090c72557592cffb9_966c6ab9-a831-4fe4-9716-7f627a88f64d"
+  "gitSyncId": "66439390b28def2d9a8599a3_3f61a753-d2a2-4490-a1f9-e2e56847c53d"
 }
