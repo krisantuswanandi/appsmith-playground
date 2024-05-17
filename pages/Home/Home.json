@@ -1,0 +1,71 @@
+{
+  "unpublishedPage": {
+    "name": "Home",
+    "slug": "home",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 4896,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 550,
+          "containerStyle": "none",
+          "snapRows": 124,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 89,
+          "minHeight": 1292,
+          "dynamicTriggerPathList": [],
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Home_getPokemons",
+              "name": "getPokemons",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "this.params.offset",
+                "this.params.limit"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Home_Data.pokemons",
+              "name": "Data.pokemons",
+              "collectionId": "Home_Data",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  const limit = PokemonList.pageSize;\n  const offset = (PokemonList.pageNo - 1) * limit;\n  const pokemons = await getPokemons.run({\n    limit,\n    offset\n  });\n  return Promise.all(pokemons.results.map(async pokemon => {\n    const response = await fetch(pokemon.url);\n    const result = await response.json();\n    return {\n      id: result.id,\n      name: result.name,\n      image: result.sprites.other.dream_world.front_default\n    };\n  }));\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Home",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "6643919090c72557592cffb9_966c6ab9-a831-4fe4-9716-7f627a88f64d"
+}

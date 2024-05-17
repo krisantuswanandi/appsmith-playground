@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "Data",
+    "pageId": "Home",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Home_Data",
+  "deleted": false,
+  "gitSyncId": "66439390b28def2d9a8599a3_142a7666-d3c3-4964-8f9d-5258c2bb4ab5"
+}
