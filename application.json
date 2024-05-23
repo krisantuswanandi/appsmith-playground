@@ -7,6 +7,14 @@
     {
       "id": "Users",
       "isDefault": false
+    },
+    {
+      "id": "Theaters",
+      "isDefault": false
+    },
+    {
+      "id": "Movies",
+      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -27,10 +35,10 @@
   },
   "color": "#FFEBFB",
   "unpublishedAppLayout": {
-    "type": "MOBILE"
+    "type": "FLUID"
   },
   "publishedAppLayout": {
-    "type": "MOBILE"
+    "type": "FLUID"
   },
   "unpublishedCustomJSLibs": [],
   "publishedCustomJSLibs": [],

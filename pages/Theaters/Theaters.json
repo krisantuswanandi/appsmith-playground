@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Users",
-    "slug": "users",
+    "name": "Theaters",
+    "slug": "theaters",
     "layouts": [
       {
         "viewMode": false,
@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 720,
+          "bottomRow": 880,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -29,7 +29,7 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Users_FindQuery",
+              "id": "Theaters_FindQuery",
               "name": "FindQuery",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -37,10 +37,9 @@
                 "key_select.selectedOptionValue",
                 "data_table.pageSize",
                 "data_table.sortOrder.order == \"desc\" ? -1 : 1",
-                "data_table.searchText||\"\"",
-                "data_table.sortOrder.column || 'name'",
                 "(data_table.pageNo - 1) * data_table.pageSize",
-                "order_select.selectedOptionValue"
+                "order_select.selectedOptionValue",
+                "data_table.sortOrder.column || 'location'"
               ],
               "timeoutInMillisecond": 10000
             }
@@ -48,7 +47,7 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Users",
+        "id": "Theaters",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -58,5 +57,5 @@
     "policies": []
   },
   "deleted": false,
-  "gitSyncId": "66439390b28def2d9a8599a3_3f61a753-d2a2-4490-a1f9-e2e56847c53d"
+  "gitSyncId": "6645e5d262b90b3ccb34514d_aa245715-8f9e-436b-a904-2ae566f9bc03"
 }
