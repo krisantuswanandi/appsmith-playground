@@ -114,7 +114,10 @@
     "mainContainerId": "s4nj8319n1",
     "primaryKeys": "{{PokemonList.listData.map((currentItem, currentIndex) => currentItem[\"id\"] )}}",
     "parentColumnSpace": 12.859375,
-    "dynamicTriggerPathList": [{"key": "onPageChange"}],
+    "dynamicTriggerPathList": [
+        {"key": "onPageChange"},
+        {"key": "onItemClick"}
+    ],
     "gridType": "vertical",
     "key": "vrrzm6o677",
     "backgroundColor": "transparent",
@@ -123,6 +126,7 @@
     "thumbnailSVG": "https://appcdn.appsmith.com/static/media/thumbnail.469b7e8d3a04de93014af9a7bc9ebe56.svg",
     "widgetId": "cwa1h31mxl",
     "minWidth": 450,
+    "onItemClick": "{{Util.downloadQrcode();}}",
     "parentId": "0",
     "renderMode": "CANVAS",
     "mobileTopRow": 7,
