@@ -1,7 +1,7 @@
 {
     "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-    "widgetName": "data_table",
     "onSort": "{{FindQuery.run()}}",
+    "widgetName": "data_table",
     "columnOrder": [
         "password",
         "name",
@@ -9,17 +9,18 @@
         "email",
         "customColumn1"
     ],
+    "isVisibleDownload": true,
     "dynamicPropertyPathList": [
         {"key": "onPageChange"},
         {"key": "primaryColumns.customColumn1.borderRadius"},
         {"key": "tableData"}
     ],
-    "isVisibleDownload": true,
-    "topRow": 7,
-    "bottomRow": 86,
-    "parentRowSpace": 10,
+    "topRow": 6,
+    "bottomRow": 69,
     "onPageChange": "{{FindQuery.run()}}",
     "isSortable": true,
+    "parentRowSpace": 10,
+    "columnWidthMap": {"email": 248},
     "type": "TABLE_WIDGET_V2",
     "animateLoading": true,
     "parentColumnSpace": 1,
@@ -48,7 +49,8 @@
         {"key": "primaryColumns._id1.computedValue"},
         {"key": "primaryColumns.email.computedValue"}
     ],
-    "leftColumn": 1,
+    "leftColumn": 0,
+    "delimiter": ",",
     "primaryColumns": {
         "password": {
             "computedValue": "{{data_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"password\"]))}}",
@@ -67,7 +69,7 @@
             "allowCellWrapping": false,
             "index": 0,
             "isDiscardVisible": true,
-            "isVisible": true,
+            "isVisible": false,
             "label": "password",
             "fontStyle": "",
             "textColor": "",
@@ -136,7 +138,7 @@
             "borderRadius": "{{data_table.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
             "width": 150,
             "enableFilter": true,
-            "sticky": "right",
+            "sticky": "",
             "enableSort": true,
             "id": "customColumn1",
             "isDisabled": false,
@@ -160,7 +162,7 @@
             "allowCellWrapping": false,
             "index": 2,
             "isDiscardVisible": true,
-            "isVisible": true,
+            "isVisible": false,
             "label": "_id",
             "fontStyle": "",
             "textColor": "",
@@ -212,7 +214,6 @@
             "verticalAlignment": "CENTER"
         }
     },
-    "delimiter": ",",
     "defaultSelectedRowIndex": "0",
     "derivedColumns": {"customColumn1": {
         "boxShadow": "{{data_table.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
@@ -239,8 +240,8 @@
     "labelTextSize": "0.875rem",
     "rightColumn": 64,
     "textSize": "0.875rem",
-    "widgetId": "m04j9ji345",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+    "widgetId": "m04j9ji345",
     "enableServerSideFiltering": false,
     "isVisibleFilters": true,
     "tableData": "{{FindQuery.data}}",
@@ -274,14 +275,14 @@
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "isVisiblePagination": true,
-    "columnUpdatedAt": 1715837431638,
+    "columnUpdatedAt": 1716480193147,
     "primaryColumnId": "_id",
-    "verticalAlignment": "CENTER",
     "columnSizeMap": {
         "task": 245,
         "deliveryAddress": 170,
         "step": 62,
         "id": 228,
         "status": 75
-    }
+    },
+    "verticalAlignment": "CENTER"
 }

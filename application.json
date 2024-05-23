@@ -27,7 +27,7 @@
   },
   "color": "#FFEBFB",
   "unpublishedAppLayout": {
-    "type": "MOBILE"
+    "type": "FLUID"
   },
   "publishedAppLayout": {
     "type": "MOBILE"
