@@ -7,6 +7,10 @@
     {
       "id": "Users",
       "isDefault": false
+    },
+    {
+      "id": "Theaters",
+      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -30,7 +34,7 @@
     "type": "FLUID"
   },
   "publishedAppLayout": {
-    "type": "MOBILE"
+    "type": "FLUID"
   },
   "unpublishedCustomJSLibs": [],
   "publishedCustomJSLibs": [],
