@@ -2,9 +2,9 @@
     "boxShadow": "none",
     "borderColor": "#E0DEDE",
     "srcDoc": {
-        "css": "#qrcode {\n  display: none;\n}",
-        "js": "let qrcode = new QRCode(\"qrcode\", \"\");\nlet prevText = \"\";\nfunction onTextUpdate(text = \"Hello World\") {\n  qrcode.makeCode(text);\n  appsmith.updateModel({\n    url: document.querySelector('#qrcode img').src\n  });\n}\nappsmith.onModelChange(model => {\n  if (prevText !== model.text) {\n    prevText = model.text;\n    onTextUpdate(model.text);\n  }\n});\nappsmith.onReady(() => {});",
-        "html": "<div class=\"app\">\n\t<div id=\"qrcode\"><\/div>\n\t<script src=\"https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js\"><\/script>\n<\/div>"
+        "css": "",
+        "js": "import { QRCodeCanvas } from 'https://cdn.jsdelivr.net/npm/@akamfoad/qrcode@0.3.2/+esm';\nlet prevText = \"\";\nasync function onTextUpdate(text = \"Hello World\") {\n  appsmith.updateModel({\n    url: new QRCodeCanvas(text).toDataUrl()\n  });\n}\nappsmith.onModelChange(model => {\n  if (prevText !== model.text) {\n    prevText = model.text;\n    onTextUpdate(model.text);\n  }\n});\nappsmith.onReady(async () => {});",
+        "html": "<div class=\"app\"><\/div>"
     },
     "isCanvas": false,
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.ff37253a5ce2f5284c42ede26ce165f9.svg",
@@ -56,9 +56,9 @@
     "thumbnailSVG": "https://appcdn.appsmith.com/static/media/thumbnail.a7d7cde44fad9a0d4d490def43560a78.svg",
     "widgetId": "gj4nyshx8u",
     "uncompiledSrcDoc": {
-        "css": "#qrcode {\n\tdisplay: none;\n}",
-        "js": "let qrcode = new QRCode(\"qrcode\", \"\")\nlet prevText = \"\"\n\nfunction onTextUpdate(text = \"Hello World\") {\n\tqrcode.makeCode(text)\n\tappsmith.updateModel({ url: document.querySelector('#qrcode img').src })\n}\n\nappsmith.onModelChange((model) => {\n\tif (prevText !== model.text) {\n\t\tprevText = model.text\n\t\tonTextUpdate(model.text)\n\t}\n});\n\nappsmith.onReady(() => {});",
-        "html": "<div class=\"app\">\n\t<div id=\"qrcode\"><\/div>\n\t<script src=\"https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js\"><\/script>\n<\/div>"
+        "css": "",
+        "js": "import { QRCodeCanvas } from 'https://cdn.jsdelivr.net/npm/@akamfoad/qrcode@0.3.2/+esm'\n\nlet prevText = \"\"\n\nasync function onTextUpdate(text = \"Hello World\") {\t\n\tappsmith.updateModel({ url: new QRCodeCanvas(text).toDataUrl() })\n}\n\nappsmith.onModelChange((model) => {\n\tif (prevText !== model.text) {\n\t\tprevText = model.text\n\t\tonTextUpdate(model.text)\n\t}\n});\n\nappsmith.onReady(async () => {});\n",
+        "html": "<div class=\"app\"><\/div>"
     },
     "parentId": "0",
     "renderMode": "CANVAS",
