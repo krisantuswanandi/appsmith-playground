@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "Util",
+    "pageId": "Scan",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Scan_Util",
+  "deleted": false,
+  "gitSyncId": "66518c2c04391b6c351fa5c1_f88eb8f8-ebe9-4912-bd64-6a9f1ac1b014"
+}
