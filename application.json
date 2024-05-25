@@ -15,6 +15,10 @@
     {
       "id": "Movies",
       "isDefault": false
+    },
+    {
+      "id": "Scan",
+      "isDefault": false
     }
   ],
   "viewMode": false,
