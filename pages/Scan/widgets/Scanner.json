@@ -21,6 +21,7 @@
     "mobileRightColumn": 43,
     "animateLoading": true,
     "parentColumnSpace": 12.859375,
+    "dynamicTriggerPathList": [{"key": "onCodeDetected"}],
     "leftColumn": 11,
     "dynamicBindingPathList": [
         {"key": "buttonColor"},
@@ -42,6 +43,7 @@
         "selectionBGCSSVar": "--on-canvas-ui-widget-selection",
         "selectionColorCSSVar": "--on-canvas-ui-widget-focus"
     },
+    "onCodeDetected": "{{Util.scan();}}",
     "isVisible": true,
     "label": "Scan a QR/Barcode",
     "version": 1,
