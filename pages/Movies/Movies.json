@@ -1,62 +1,32 @@
 {
+  "gitSyncId": "6645e5d262b90b3ccb34514d_f3a31989-0871-4993-b1a7-aed157cc2f0c",
   "unpublishedPage": {
-    "name": "Movies",
-    "slug": "movies",
     "layouts": [
       {
-        "viewMode": false,
         "dsl": {
-          "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1174,
-          "snapColumns": 64,
-          "detachFromLayout": true,
-          "widgetId": "0",
-          "topRow": 0,
           "bottomRow": 880,
-          "containerStyle": "none",
-          "snapRows": 125,
-          "parentRowSpace": 1,
-          "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 89,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "dynamicTriggerPathList": [],
+          "leftColumn": 0,
           "minHeight": 900,
           "parentColumnSpace": 1,
-          "dynamicTriggerPathList": [],
-          "dynamicBindingPathList": [],
-          "leftColumn": 0
-        },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "Movies_FindQuery",
-              "name": "FindQuery",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "data_table.sortOrder.column || 'awards'",
-                "key_select.selectedOptionValue",
-                "data_table.sortOrder.order == \"desc\" ? -1 : 1",
-                "data_table.pageSize",
-                "data_table.searchText||\"\"",
-                "(data_table.pageNo - 1) * data_table.pageSize",
-                "order_select.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
-        "layoutOnLoadActionErrors": [],
-        "validOnPageLoadActions": true,
-        "id": "Movies",
-        "deleted": false,
-        "policies": [],
-        "userPermissions": []
+          "parentRowSpace": 1,
+          "rightColumn": 1174,
+          "snapColumns": 64,
+          "snapRows": 125,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "version": 89,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
       }
     ],
-    "userPermissions": [],
-    "policies": []
-  },
-  "deleted": false,
-  "gitSyncId": "6645e5d262b90b3ccb34514d_f3a31989-0871-4993-b1a7-aed157cc2f0c"
+    "name": "Movies",
+    "slug": "movies"
+  }
 }
